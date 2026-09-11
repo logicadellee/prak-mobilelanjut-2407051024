@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'column_widget.dart';
+import 'row_widget.dart';
+import 'first_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,14 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Praktikum Mobile Lanjut'),
-        ),
-        body: const Center(
-          child: Text('Halo Nama Saya Adelia Agus Safitri'),
-        ),
-      ),
-    );
+      title: 'Praktikum Mobile Lanjut',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ), // ThemeData
+      home: const FirstWidget(),
+    ); // MaterialApp
   }
 }
