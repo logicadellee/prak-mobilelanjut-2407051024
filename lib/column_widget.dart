@@ -12,7 +12,7 @@ class ColumnWidget extends StatelessWidget {
       body: const Column(
         children: [
           Text('D3 Manajemen Informatika'),
-          Text('FMIPA'),
+          Text('Fakultas Matematika dan Ilmu Pengetahuan Alam'),
           Text('Universitas Lampung'),
           Text('2026'),
         ],
