@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 // import 'form_widget.dart';
 // import 'app_theme.dart';
 // import 'responsive_profile.dart';
-import 'assets_media.dart';
+// import 'assets_media.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,17 +19,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Assets Media',
-
+      title: 'Pertemuan 7 - Animations',
       theme: ThemeData(
         useMaterial3: true,
-        fontFamily: 'Poppins',
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF4D63D9),
+          seedColor: Colors.deepPurple,
+        ),
+        appBarTheme: const AppBarTheme(
+          centerTitle: true,
         ),
       ),
-
-      home: const AssetsMediaPage(),
+      home: const HomePage(),
     );
   }
 }
