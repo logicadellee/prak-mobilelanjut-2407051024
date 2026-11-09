@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-// import 'column_widget.dart';
-// import 'row_widget.dart';
-// import 'first_widget.dart';
-// import 'form_widget.dart';
-// import 'app_theme.dart';
-// import 'responsive_profile.dart';
-// import 'assets_media.dart';
-import 'home_page.dart';
+import 'package:provider/provider.dart';
+import 'providers/product_provider.dart';
+import 'views/product_list_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ProductProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -19,17 +19,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Pertemuan 7 - Animations',
+      title: 'Katalog Produk',
       theme: ThemeData(
-        useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.deepPurple,
         ),
-        appBarTheme: const AppBarTheme(
-          centerTitle: true,
-        ),
+        useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const ProductListView(),
     );
   }
 }
